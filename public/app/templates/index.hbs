@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="span12">
+    <div class="signup">
+      <h1>Stop Writing And Cashing Rent Checks</h1>
+      <h2 class="lead">Rentr Is A Payment System For Independant Landlords and Tenants</h2>
+        {{ view Ember.TextField placeholder="First Name" valueBinding='firstName' name='first_name' viewName='firstNameField'}}
+        {{ view Ember.TextField placeholder="Last Name" valueBinding='lastName' name='last_name' viewName='lastNameField'}}
+        <button {{action "create" }}>Say Hello</button>
+
+    </div>
+
+  </div>
+  
+</div>

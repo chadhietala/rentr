@@ -1,0 +1,33 @@
+{
+  "name": "Rentr",
+  "version": "0.0.1",
+  "description": "App for accepting rent payments",
+  "author": "Chad Hietala",
+  "main": "./server.coffee",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chadhietala/rentr"
+  },
+  "engines": {
+    "node": ">=0.8.8"
+  },
+  "devDependencies": {
+    "grunt-neuter": "git://github.com/chadhietala/grunt-neuter.git",
+    "grunt-shell": "~0.1.4",
+    "grunt-contrib-coffee": "~0.3.2",
+    "grunt-ember-templates": "~0.2.0",
+    "grunt-jasmine-runner": "~0.6.0",
+    "grunt": "git://github.com/gruntjs/grunt.git",
+    "grunt-contrib-watch": "~0.1.4",
+    "coffee-script": "~1.4.0"
+  },
+  "dependencies": {
+    "yaml": "",
+    "express": "3.x",
+    "config": "",
+    "hbs": "1.x",
+    "less": "1.x",
+    "less-middleware": "",
+    "underscore": "1.x"
+  }
+}

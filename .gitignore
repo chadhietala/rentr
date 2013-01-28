@@ -1,0 +1,10 @@
+.DS_Store
+.project
+.idea
+nbproject
+.settings
+node_modules
+logs
+public/compiled_app
+public/application.js
+config/runtime.json

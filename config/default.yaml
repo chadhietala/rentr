@@ -1,0 +1,5 @@
+app:
+  port: 3000
+  pub_dir: "public"
+  cookie_secret: "therentrapp"
+  db: 'mongodb://localhost/rentr'
