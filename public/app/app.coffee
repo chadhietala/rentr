@@ -5,6 +5,9 @@ require '../dependencies/ember'
 require '../dependencies/ember-data'
 require '../dependencies/compiled/templates'
 
+# Views
+require 'views/Ember.RadioButton'
+
 window.App  = Ember.Application.create
   rootElement: if window.TESTING then '#qunit-fixture' else '#rentrapp'
 
@@ -18,7 +21,7 @@ require 'models/user'
 # Controllers 
 require 'controllers/index_controller'
 
-# Views
+
 
 # Router
 require 'routes/router'

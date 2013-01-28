@@ -5,7 +5,18 @@
       <h2 class="lead">Rentr Is A Payment System For Independant Landlords and Tenants</h2>
         {{ view Ember.TextField placeholder="First Name" valueBinding='firstName' name='first_name' viewName='firstNameField'}}
         {{ view Ember.TextField placeholder="Last Name" valueBinding='lastName' name='last_name' viewName='lastNameField'}}
-        <button {{action "create" }}>Say Hello</button>
+        {{ view Ember.TextField placeholder="Email" type="email" valueBinding='email' name='email' viewName='emailField'}}
+        {{ view Ember.TextField placeholder="Password" type="password" valueBinding='password' name='password' viewName='passwordField'}}
+        {{#view Ember.RadioButtonGroup name="role" valueBinding="content.role"}}
+          <label>
+            {{view RadioButton value="admin"}}
+            {{role}}
+          </label>
+          <label>
+            {{view RadioButton value="admin"}}
+          </label>
+        {{/view}}
+        <button class="btn btn-primary" {{action "create" }}>Sign Up</button>
 
     </div>
 
