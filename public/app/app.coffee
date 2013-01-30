@@ -7,6 +7,7 @@ require '../dependencies/compiled/templates'
 
 # Views
 require 'views/Ember.RadioButton'
+require 'views/Ember.TextField'
 
 window.App  = Ember.Application.create
   rootElement: if window.TESTING then '#qunit-fixture' else '#rentrapp'

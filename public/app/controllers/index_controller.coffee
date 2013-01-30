@@ -1,8 +1,11 @@
 App.IndexController = Ember.ObjectController.extend
   
+  _validate: (type) ->
+
   create: ->
-    @store.commit()
     console.log(@content)
+
+    @store.commit()
     @content.addObserver '_id', this, 'afterCreate'
 
   afterCreate: ->

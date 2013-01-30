@@ -1,22 +1,60 @@
 <div class="row">
   <div class="span12">
     <div class="signup">
-      <h1>Stop Writing And Cashing Rent Checks</h1>
-      <h2 class="lead">Rentr Is A Payment System For Independant Landlords and Tenants</h2>
-        {{ view Ember.TextField placeholder="First Name" valueBinding='firstName' name='first_name' viewName='firstNameField'}}
-        {{ view Ember.TextField placeholder="Last Name" valueBinding='lastName' name='last_name' viewName='lastNameField'}}
-        {{ view Ember.TextField placeholder="Email" type="email" valueBinding='email' name='email' viewName='emailField'}}
-        {{ view Ember.TextField placeholder="Password" type="password" valueBinding='password' name='password' viewName='passwordField'}}
-        {{#view Ember.RadioButtonGroup name="role" valueBinding="content.role"}}
-          <label>
-            {{view RadioButton value="admin"}}
-            {{role}}
-          </label>
-          <label>
-            {{view RadioButton value="admin"}}
-          </label>
-        {{/view}}
-        <button class="btn btn-primary" {{action "create" }}>Sign Up</button>
+      <div class="headline">
+        <h1>Stop Writing And Cashing Rent Checks</h1>
+
+        <h2 class="lead">Rentr Is A Payment System For Independant Landlords and Tenants</h2>
+      </div>
+      <form class="form-horizontal offset3">
+        <div class="control-group">
+          <label class="control-label" for="first_name">First Name</label>
+          <div class="controls">
+            {{ view Ember.TextField placeholder="First Name" required="true" valueBinding='firstName' name='first_name' viewName='firstNameField'}}
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="last_name">Last Name</label>
+          <div class="controls">
+            {{ view Ember.TextField placeholder="Last Name" required="true" valueBinding='lastName' name='last_name' viewName='lastNameField'}}
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="email">Email</label>
+          <div class="controls">
+            {{ view Ember.TextField placeholder="Email" required="true" type="email" valueBinding='email' name='email' viewName='emailField'}}
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="password">Password</label>
+          <div class="controls">
+            {{ view Ember.TextField placeholder="Password" required="true" type="password" valueBinding='password' name='password' viewName='passwordField'}}
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="">Account Type</label>
+          <div class="controls">
+            {{#view Ember.RadioButtonGroup name="accountType" required="true" valueBinding="accountType"}}
+              <label class="radio">
+                {{view RadioButton checked='false' value="landlord"}}
+                Landlord
+              </label>
+              <label class="radio">
+                {{view RadioButton checked='false' required="true" value="tenant"}}
+                Tenant
+              </label>
+            {{/view}}
+          </div>
+
+        </div>
+        <div class="control-group">
+          
+          <div class="controls">
+            <input class="btn btn-primary" {{action "create" }} type="submit" value="Sign Up">
+          </div>
+          
+        </div>
+      </form>
 
     </div>
 
