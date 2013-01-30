@@ -82,7 +82,9 @@ function program1(depth0,data) {
   stack1 = helpers.view.call(depth0, "Ember.RadioButtonGroup", {hash:stack1,inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n          </div>\n\n        </div>\n        <div class=\"control-group\">\n          \n          <div class=\"controls\">\n            <input class=\"btn btn-primary\" ");
-  stack1 = helpers.action.call(depth0, "create", {hash:{},contexts:[depth0],data:data});
+  stack1 = {};
+  stack1['target'] = "view";
+  stack1 = helpers.action.call(depth0, "create", "model", {hash:stack1,contexts:[depth0,depth0],data:data});
   data.buffer.push(escapeExpression(stack1) + " type=\"submit\" value=\"Sign Up\">\n          </div>\n          \n        </div>\n      </form>\n\n    </div>\n\n  </div>\n  \n</div>");
   return buffer;
 });

@@ -5,7 +5,7 @@ require '../dependencies/ember'
 require '../dependencies/ember-data'
 require '../dependencies/compiled/templates'
 
-# Views
+# Base View Extensions not yet in Ember
 require 'views/Ember.RadioButton'
 require 'views/Ember.TextField'
 
@@ -21,6 +21,9 @@ require 'models/user'
 
 # Controllers 
 require 'controllers/index_controller'
+
+# Views
+require 'views/index_view'
 
 
 
