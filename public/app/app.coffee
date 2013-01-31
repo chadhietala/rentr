@@ -1,4 +1,5 @@
 # 3rd Party dependencies
+require '../components/lodash/lodash.underscore'
 require '../dependencies/jquery'
 require '../dependencies/handlebars-runtime'
 require '../dependencies/ember'
@@ -23,9 +24,7 @@ require 'models/user'
 require 'controllers/index_controller'
 
 # Views
-require 'views/index_view'
-
-
+require 'views/name_textfield'
 
 # Router
 require 'routes/router'

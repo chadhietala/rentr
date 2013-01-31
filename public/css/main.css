@@ -5,3 +5,10 @@ body{
 .signup .headline{
   text-align: center;
 }
+
+.show{
+  display:inline;
+}
+.hide{
+  display:none;
+}
