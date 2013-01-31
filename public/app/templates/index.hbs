@@ -8,59 +8,73 @@
       </div>
       <form class="form-horizontal offset3">
         <div class="control-group">
-          <label class="control-label" for="first_name">First Name</label>
+          <label class="control-label" {{bindAttr for="view.firstName.elementId"}}>First Name</label>
           <div class="controls">
-            {{view App.NameTextField viewName="firstName" valueBinding="firstName"}}
+            {{view App.ValidTextField viewName="firstName" valueBinding="firstName"}}
             <span {{bindAttr class="firstNameError:show:hide"}}>
-              <i bindAttr class="icon-remove"></i>
-              First Name is required
+              <span class="alert alert-error">
+                <i class="icon-remove"></i>
+                First Name is required
+              </span>
             </span>
           </div>
         </div>
         <div class="control-group">
-          <label class="control-label" for="last_name">Last Name</label>
+          <label class="control-label" {{bindAttr for="view.lastName.elementId"}}>Last Name</label>
           <div class="controls">
-            {{view App.NameTextField viewName="lastName" valueBinding="lastName"}}
+            {{view App.ValidTextField viewName="lastName" valueBinding="lastName"}}
             <span {{bindAttr class="lastNameError:show:hide"}}>
-              <i bindAttr class="icon-remove"></i>
-              Last Name is required
+              <span class="alert alert-error">
+                <i class="err icon-remove"></i>
+                Last Name is required
+              </span>
             </span>
           </div>
         </div>
         <div class="control-group">
-          <label class="control-label" for="email">Email</label>
+          <label class="control-label" {{bindAttr for="view.email.elementId"}}>Email</label>
           <div class="controls">
-            {{view App.NameTextField viewName="email" valueBinding="email"}}
+            {{view App.ValidTextField viewName="email" valueBinding="email"}}
             <span {{bindAttr class="emailError:show:hide"}}>
-              <i bindAttr class="icon-remove"></i>
-              Not a valid email
+              <span class="alert alert-error">
+                <i  class="icon-remove"></i>
+                Not a valid email
+              </span>
             </span>
           </div>
         </div>
         <div class="control-group">
-          <label class="control-label" for="password">Password</label>
+          <label class="control-label" {{bindAttr for="view.password.elementId"}}>Password</label>
           <div class="controls">
-            {{view App.NameTextField viewName="password" valueBinding="password" type="password"}}
+            {{view App.ValidTextField viewName="password" valueBinding="password" type="password"}}
             <span {{bindAttr class="passwordError:show:hide"}}>
-              <i bindAttr class="icon-remove"></i>
-              Password must be at least 6 characters
+              <span class="alert alert-error">
+                <i class="icon-remove"></i>
+                Password must be at least 6 characters
+              </span>
             </span>
           </div>
         </div>
         <div class="control-group">
-          <label class="control-label" for="">Account Type</label>
-          <div class="controls">
-            {{#view Ember.RadioButtonGroup name="accountType" required="true" valueBinding="accountType"}}
-              <label class="radio">
-                {{view RadioButton checked='false' value="landlord"}}
-                Landlord
-              </label>
-              <label class="radio">
-                {{view RadioButton checked='false' required="true" value="tenant"}}
-                Tenant
-              </label>
-            {{/view}}
-          </div>
+          <label class="control-label">Account Type</label>
+            <div class="controls">
+              {{#view Ember.RadioButtonGroup name="accountType" required="true" valueBinding="accountType"}}
+                <label class="radio">
+                  {{view RadioButton checked='false' value="landlord"}}
+                  Landlord
+                </label>
+                <label class="radio">
+                  {{view RadioButton checked='false' required="true" value="tenant"}}
+                  Tenant
+                </label>
+              {{/view}}
+              <span {{bindAttr class="accountTypeError:show:hide"}}>
+                <span class="alert alert-error">
+                  <i bindAttr class="icon-remove"></i>
+                  Choose an Account Type
+                </span>
+              </span>
+            </div>
 
         </div>
         <div class="control-group">

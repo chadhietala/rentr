@@ -1,4 +1,4 @@
-App.NameTextField = Ember.TextField.extend
+App.ValidTextField = Ember.TextField.extend
   focusOut: (event) ->
     controller = @get 'controller'
     viewName = @get 'viewName'

@@ -1,11 +1,18 @@
 App.IndexController = Ember.ObjectController.extend
   
-
   createUser: ->
-    errors = _.uniq [@get('firstNameError'), @get('lastNameError'), @get('emailError'), @get('passwordError')]
+    # Validate again on submit incase fields were left empty
+    @getValue 'firstName'
+    @getValue 'lastName'
+    @getValue 'email'
+    @getValue 'password'
+    @getValue 'accountType'
 
-    if errors.length is 1 and errors[0] is false
+    errors = _.uniq [@get('firstNameError'), @get('lastNameError'), @get('emailError'), @get('passwordError'), @get('accountTypeError')]
+
+    if errors.length is 1 and errors[0] is 'false'
       @store.commit()
+
       @content.addObserver '_id', this, 'afterCreate'
 
   afterCreate: ->
@@ -25,7 +32,6 @@ App.IndexController = Ember.ObjectController.extend
 
   validateAccountType: ->
     @getValue 'accountType'
-
 
   getValue: (val) ->
     error = false

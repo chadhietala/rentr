@@ -21,6 +21,9 @@ userCtrl.create = (req, res) ->
   user = new User
     firstName: req.body.user.first_name
     lastName: req.body.user.last_name
+    email: req.body.user.email
+    password: req.body.user.password
+    accountType: req.body.user.account_type
 
   user.save (err) ->
     console.log err if err
