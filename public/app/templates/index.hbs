@@ -3,7 +3,6 @@
     <div class="signup">
       <div class="headline">
         <h1>Stop Writing And Cashing Rent Checks</h1>
-
         <h2 class="lead">Rentr Is A Payment System For Independant Landlords and Tenants</h2>
       </div>
       <form class="form-horizontal offset3">
@@ -75,14 +74,16 @@
                 </span>
               </span>
             </div>
-
         </div>
         <div class="control-group">
-          
           <div class="controls">
             <input class="btn btn-primary" {{ action createUser }} type="submit" value="Sign Up">
           </div>
-          
+        </div>
+        <div class="control-group">
+          <div class="controls">
+            <a {{bindAttr href="content.stripeHREF"}}>Connect With Stripe</a>
+          </div>
         </div>
       </form>
 

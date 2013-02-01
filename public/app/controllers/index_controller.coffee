@@ -1,5 +1,5 @@
 App.IndexController = Ember.ObjectController.extend
-  
+  content: {}
   createUser: ->
     # Validate again on submit incase fields were left empty
     @getValue 'firstName'

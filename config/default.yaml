@@ -3,3 +3,5 @@ app:
   pub_dir: "public"
   cookie_secret: "therentrapp"
   db: 'mongodb://localhost/rentr'
+  stripe_test_secret: 'sk_test_pQRGq45h7juu26MHRuXhdZmB'
+  stripe_test_api_key: 'pk_test_2ypvHQNfvmYV6BCKz6FNXZhA'

@@ -20,8 +20,10 @@ if window.TESTING
 # Data Store and all the Models
 require 'models/store'
 require 'models/user'
+require 'models/config'
 
 # Controllers 
+require 'controllers/application_controller'
 require 'controllers/index_controller'
 
 # Views

@@ -13,9 +13,9 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
 
   foundHelper = helpers.partial;
   stack1 = foundHelper ? foundHelper.call(depth0, "mainNav", {hash:{},contexts:[depth0],data:data}) : helperMissing.call(depth0, "partial", "mainNav", {hash:{},contexts:[depth0],data:data});
-  data.buffer.push(escapeExpression(stack1) + "\n<div class=\"container\">\n  ");
+  data.buffer.push(escapeExpression(stack1) + "\n\n<div class=\"container\">\n  ");
   stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},contexts:[depth0],data:data});
-  data.buffer.push(escapeExpression(stack1) + "\n</div>\n\n");
+  data.buffer.push(escapeExpression(stack1) + "\n</div>\n");
   return buffer;
 });
 
@@ -40,7 +40,7 @@ function program1(depth0,data) {
   data.buffer.push(escapeExpression(stack1) + "\n                  Tenant\n                </label>\n              ");
   return buffer;}
 
-  data.buffer.push("<div class=\"row\">\n  <div class=\"span12\">\n    <div class=\"signup\">\n      <div class=\"headline\">\n        <h1>Stop Writing And Cashing Rent Checks</h1>\n\n        <h2 class=\"lead\">Rentr Is A Payment System For Independant Landlords and Tenants</h2>\n      </div>\n      <form class=\"form-horizontal offset3\">\n        <div class=\"control-group\">\n          <label class=\"control-label\" ");
+  data.buffer.push("<div class=\"row\">\n  <div class=\"span12\">\n    <div class=\"signup\">\n      <div class=\"headline\">\n        <h1>Stop Writing And Cashing Rent Checks</h1>\n        <h2 class=\"lead\">Rentr Is A Payment System For Independant Landlords and Tenants</h2>\n      </div>\n      <form class=\"form-horizontal offset3\">\n        <div class=\"control-group\">\n          <label class=\"control-label\" ");
   stack1 = {};
   stack1['for'] = "view.firstName.elementId";
   stack1 = helpers.bindAttr.call(depth0, {hash:stack1,contexts:[],data:data});
@@ -104,8 +104,12 @@ function program1(depth0,data) {
   stack1 = {};
   stack1['class'] = "accountTypeError:show:hide";
   stack1 = helpers.bindAttr.call(depth0, {hash:stack1,contexts:[],data:data});
-  data.buffer.push(escapeExpression(stack1) + ">\n                <span class=\"alert alert-error\">\n                  <i bindAttr class=\"icon-remove\"></i>\n                  Choose an Account Type\n                </span>\n              </span>\n            </div>\n\n        </div>\n        <div class=\"control-group\">\n          \n          <div class=\"controls\">\n            <input class=\"btn btn-primary\" ");
+  data.buffer.push(escapeExpression(stack1) + ">\n                <span class=\"alert alert-error\">\n                  <i bindAttr class=\"icon-remove\"></i>\n                  Choose an Account Type\n                </span>\n              </span>\n            </div>\n        </div>\n        <div class=\"control-group\">\n          <div class=\"controls\">\n            <input class=\"btn btn-primary\" ");
   stack1 = helpers.action.call(depth0, "createUser", {hash:{},contexts:[depth0],data:data});
-  data.buffer.push(escapeExpression(stack1) + " type=\"submit\" value=\"Sign Up\">\n          </div>\n          \n        </div>\n      </form>\n\n    </div>\n\n  </div>\n  \n</div>");
+  data.buffer.push(escapeExpression(stack1) + " type=\"submit\" value=\"Sign Up\">\n          </div>\n        </div>\n        <div class=\"control-group\">\n          <div class=\"controls\">\n            <a ");
+  stack1 = {};
+  stack1['href'] = "content.stripeHREF";
+  stack1 = helpers.bindAttr.call(depth0, {hash:stack1,contexts:[],data:data});
+  data.buffer.push(escapeExpression(stack1) + ">Connect With Stripe</a>\n          </div>\n        </div>\n      </form>\n\n    </div>\n\n  </div>\n  \n</div>");
   return buffer;
 });

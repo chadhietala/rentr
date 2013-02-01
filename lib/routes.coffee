@@ -6,6 +6,8 @@ app = module.parent.exports.app
 
 homeCtrl = require './controllers/home_controller'
 userCtrl = require './controllers/user_controller'
+configCtrl = require './controllers/config_controller'
 
 app.get '/', homeCtrl.root
 app.post '/users', userCtrl.create
+app.get '/config', configCtrl.index
