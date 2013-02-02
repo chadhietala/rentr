@@ -11,3 +11,4 @@ configCtrl = require './controllers/config_controller'
 app.get '/', homeCtrl.root
 app.post '/users', userCtrl.create
 app.get '/config', configCtrl.index
+app.get '/config/:1', configCtrl.index

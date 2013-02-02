@@ -1,3 +1,3 @@
 App.ApplicationController = Ember.ObjectController.extend
-  content:
-    test: 'ssss'
+  content:null
+  config:null

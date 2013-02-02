@@ -11,7 +11,8 @@ configCtrl = module.exports
 
 configCtrl.index = (req, res) ->
   config =
-    stripeSecret: CONF.app.stripe_test_secret
-    stripeAPIKey: CONF.app.stripe_test_api_key
+    secret: CONF.app.stripe_test_secret
+    apiKey: CONF.app.stripe_test_api_key
+    id: 1
 
   res.send config: config

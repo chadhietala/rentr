@@ -40,7 +40,9 @@ function program1(depth0,data) {
   data.buffer.push(escapeExpression(stack1) + "\n                  Tenant\n                </label>\n              ");
   return buffer;}
 
-  data.buffer.push("<div class=\"row\">\n  <div class=\"span12\">\n    <div class=\"signup\">\n      <div class=\"headline\">\n        <h1>Stop Writing And Cashing Rent Checks</h1>\n        <h2 class=\"lead\">Rentr Is A Payment System For Independant Landlords and Tenants</h2>\n      </div>\n      <form class=\"form-horizontal offset3\">\n        <div class=\"control-group\">\n          <label class=\"control-label\" ");
+  data.buffer.push("<div class=\"row\">\n  <div class=\"span12\">\n    <div class=\"signup\">\n      <div class=\"headline\">\n\n        <h1>Stop Writing And Cashing Rent Checks</h1>\n        <h2 class=\"lead\">Rentr Is A Payment System For Independant Landlords and Tenants ");
+  stack1 = helpers._triageMustache.call(depth0, "secret", {hash:{},contexts:[depth0],data:data});
+  data.buffer.push(escapeExpression(stack1) + "</h2>\n\n      </div>\n      <form class=\"form-horizontal offset3\">\n        <div class=\"control-group\">\n          <label class=\"control-label\" ");
   stack1 = {};
   stack1['for'] = "view.firstName.elementId";
   stack1 = helpers.bindAttr.call(depth0, {hash:stack1,contexts:[],data:data});

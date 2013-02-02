@@ -1,3 +1,5 @@
 App.ApplicationRoute = Ember.Route.extend
-  model: ->
-    App.Config.find()
+  setupController: (controller, model) ->
+    @_super controller, model
+    config = App.Config.find(1)
+    controller.set 'content', config

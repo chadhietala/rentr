@@ -1,5 +1,4 @@
 # 3rd Party dependencies
-require '../dependencies/lodash'
 require '../dependencies/convenience_methods'
 require '../dependencies/jquery'
 require '../dependencies/handlebars-runtime'
